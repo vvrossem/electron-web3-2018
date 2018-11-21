@@ -2,7 +2,7 @@ import { retrieveJWT } from "react/services/session";
 
 function sendApiRequest({ url, method = "GET", params = null }) {
   const jwt = retrieveJWT();
-  
+
   const headers = new Headers();
   headers.append("Accept", "application/json");
   headers.append("Content-Type", "application/json");
@@ -14,7 +14,11 @@ function sendApiRequest({ url, method = "GET", params = null }) {
     }
     return response.json();
   }
-
+  console.log(process.env);
+  if (process.env.ELECTRON) {
+    url = "http://localhost:3030" + url;
+    console.log("coucou");
+  }
   return fetch(url, {
     method: method,
     headers: headers,
