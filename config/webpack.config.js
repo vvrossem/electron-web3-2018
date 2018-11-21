@@ -58,9 +58,12 @@ function buildConfig(env, argv) {
       new ManifestPlugin({
         writeToFileEmit: true
       }),
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.DefinePlugin({
+        'process.env.ELECTRON': JSON.stringify(process.env.ELECTRON)
+      })
     ]
   };
 }
- 
+
 module.exports = buildConfig;

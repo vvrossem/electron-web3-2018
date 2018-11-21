@@ -6,11 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WEB 3 :: 2018-2019</title>
-
+    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
+    <div class="pt-1" id="nodragpls"></div>
+    <div class="row m-0 w-100" id="headerRow">
+        <div class="col p-0">
+            <div class="option float-right noselect" id="close-btn"><svg name="TitleBarClose" width="12" height="12"
+                    viewBox="0 0 12 12">
+                    <polygon fill="#ffffff" fill-rule="evenodd" points="11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1"></polygon>
+                </svg></div>
+            <div class="option float-right noselect" id="max-btn"><svg name="TitleBarMaximize" width="12" height="12"
+                    viewBox="0 0 12 12">
+                    <rect width="9" height="9" x="1.5" y="1.5" fill="none" stroke="#ffffff"></rect>
+                </svg></div>
+            <div class="option float-right noselect" id="min-btn"><svg name="TitleBarMinimize" width="12" height="12"
+                    viewBox="0 0 12 12">
+                    <rect fill="#ffffff" width="10" height="1" x="1" y="6"></rect>
+                </svg></div>
+        </div>
+    </div>
+    <div style="background:black"></div>
     <div id="root"></div>
+    <script src="buttons.js"></script>
     <script>
         {
             const scripts = [];
