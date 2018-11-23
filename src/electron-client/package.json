@@ -1,0 +1,20 @@
+{
+  "name": "web3-boilerplate-2018-2019",
+  "version": "1.0.0",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "dist": "electron-builder",
+    "electron": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^3.0.9",
+    "electron-builder": "^20.36.2"
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  }
+}
