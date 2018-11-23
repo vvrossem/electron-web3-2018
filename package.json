@@ -8,7 +8,7 @@
     "build": "webpack --mode production --config config/webpack.config.js",
     "clean": "rm -rf dist",
     "client": "webpack-dev-server --mode development --config config/webpack.config.js",
-    "clientElectron": "cross-env HELLO=false ELECTRON=true webpack-dev-server --mode development --config config/webpack.config.js",
+    "clientElectron": "cross-env ELECTRON=true webpack-dev-server --mode development --config config/webpack.config.js",
     "server": "cross-env NODE_ENV=development nodemon src/server/bin/www",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "electron": "electron ./src/electron-client/main.js",

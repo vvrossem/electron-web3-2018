@@ -10,7 +10,7 @@ const Navigation = ({ jwt, theme, toggleTheme }) => {
       <Nav className="mr-auto">
         <Navbar.Brand>Current JWT : {jwt} </Navbar.Brand>
       </Nav>
-      <Button variant="outline-info" onClick={toggleTheme}>
+      <Button variant="outline-info" id="buttonTheme" onClick={toggleTheme}>
         Change Theme
       </Button>
     </Navbar>

@@ -1,11 +1,12 @@
 const electron = require('electron');
-const { app, Menu, BrowserWindow, webFrame } = electron;
+const { app, Menu, BrowserWindow, globalShortcut } = electron;
 const path = require('path');
 
 app.on('ready', function () {
     let mainWindow;
     var iconPath = path.join(__dirname, 'ico.png');
-    mainWindow = new BrowserWindow({ width: 800, height: 600, frame: false, icon: iconPath });
+    mainWindow = new BrowserWindow({ width: 800, frame: false, height: 600, icon: iconPath });
+
     //Chargement de l'HTML dans la page
     const template = [
         {
@@ -38,12 +39,11 @@ app.on('ready', function () {
             ]
         }
     ]
-
     if (process.platform === 'darwin') {
         //IOS
     }
-
-    const menu = Menu.buildFromTemplate(template)
-    //Menu.setApplicationMenu(menu);
+    //Menu.setApplicationMenu(Menu.buildFromTemplate(template));
+    Menu.setApplicationMenu(null);
     mainWindow.loadFile(path.join(__dirname, "index.html"));
+
 });
