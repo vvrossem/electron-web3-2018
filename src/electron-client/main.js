@@ -42,8 +42,11 @@ app.on('ready', function () {
     if (process.platform === 'darwin') {
         //IOS
     }
-
     const menu = Menu.buildFromTemplate(template)
     //Menu.setApplicationMenu(menu);
+
+
     mainWindow.loadFile(path.join(__dirname, "index.html"));
+
+
 });
