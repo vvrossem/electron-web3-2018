@@ -13,7 +13,8 @@ function buildConfig(env, argv) {
     name: 'base',
     context: projectRoot,
     entry: {
-      application: './src/client/entries/application.js'
+      application: './src/client/entries/application.js',
+      applicationNewMessage: './src/client/entries/applicationNewMessage.js'
     },
     resolve: {
       extensions: ['.js', '.jsx', '.json'],

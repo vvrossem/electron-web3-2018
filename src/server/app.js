@@ -89,6 +89,10 @@ app.use(express.static(path.join(__dirname, "../../dist")));
 app.use("/", indexRouter);
 app.use("/api/sessions", sessionsRouter);
 app.use(authMiddleware);
+
+const socket = require('./modules/web_socket.js');
+socket.init_socket();
+
 app.use("/api/users", usersRouter);
 app.use("/api/messages", messagesRouter);
 
