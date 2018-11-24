@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const db = require('../modules/db.js');
+const socket = require('../modules/web_socket.js');
 
 router.get('/', function(req, res, next) {
   db.db.collection('messages').find().toArray().then((messages) => {
@@ -29,6 +30,7 @@ router.delete('/:id', function(req, res, next) {
 router.post('/', function(req, res, next) {
   db.db.collection('messages').insertOne(req.body).then((result) => {
     req.body._id = result.insertedId;
+    socket.io.sockets.emit('new_message', {message : req.body});
     res.json(req.body);
   }).catch((err) => {
     res.status(500).send(err);
