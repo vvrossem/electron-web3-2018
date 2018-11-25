@@ -11,7 +11,7 @@ app.on('ready', function () {
     //Chargement de l'HTML dans la page
     const template = [
         {
-            label: 'View',
+            label: app.getName(),
             submenu: [
                 {
                     label: 'DevTools',
@@ -24,6 +24,21 @@ app.on('ready', function () {
                 {
                     label: 'Force Reload',
                     role: 'forcereload'
+                },
+                {
+                    type: 'separator'
+                },
+                {
+                    role: 'hide'
+                },
+                {
+                    role: 'hideothers'
+                },
+                {
+                    role: 'unhide'
+                },
+                {
+                    role: 'quit'
                 }
             ]
         }
