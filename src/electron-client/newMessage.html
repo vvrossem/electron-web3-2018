@@ -8,26 +8,10 @@
     <title>WEB 3 :: 2018-2019</title>
     <link rel="stylesheet" href="app.css">
 </head>
+
 <body>
     <div id="root"></div>
-    <script>
-        {
-            const scripts = [];
-            // Dynamically insert the DLL script in development env in the
-            // renderer process
-
-            // Dynamically insert the bundled app script in the renderer process
-
-            scripts.push(
-                'http://localhost:3000/applicationNewMessage.js'
-            );
-            document.write(
-                scripts
-                    .map(script => `<script defer src="${script}"><\/script>`)
-                    .join('')
-            );
-        }
-    </script>
+    <script src="applicaiton.js"></script>
 </body>
 
 </html>
