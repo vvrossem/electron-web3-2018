@@ -4,8 +4,7 @@ const path = require('path');
 
 app.on('ready', function () {
     let mainWindow;
-    var iconPath = path.join(__dirname, 'ico.png');
-    mainWindow = new BrowserWindow({ width: 800, frame: false, height: 600, icon: iconPath });
+    mainWindow = new BrowserWindow({ width: 800, frame: false, height: 600 });
 
     //Chargement de l'HTML dans la page
     const template = [
